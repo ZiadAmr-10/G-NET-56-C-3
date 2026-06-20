@@ -43,6 +43,43 @@ namespace Assignment03
             //watch2 .Stop();
             //Console.WriteLine(watch2);
             #endregion
+            #region Question02
+            //int age, day, price ;
+            //bool StudentId;
+            //Console.WriteLine("Enter Your Age : ");
+            //age=int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter The Day : ");
+            //day=int.Parse(Console.ReadLine());
+            //Console.WriteLine("Do you have a valid StudentId : ");
+            //string input=Console.ReadLine();
+            //StudentId = input.ToLower() == "yes";
+            //if (age < 5)
+            //{
+            //    price = 0;
+            //}
+            //else if (age >= 5 && age <= 12)
+            //{
+            //    price = 30;
+            //}
+            //else if(age >= 13 && age <= 59)
+            //{
+            //    price = 50;
+            //}
+            //else
+            //{
+            //    price = 25;
+            //}
+            //if (price > 0 &&( day == 6 || day == 7))
+            //{
+            //    price += 10;
+            //}
+            //if (price > 0 && StudentId)
+            //{
+            //    price = price - (int)(price * 0.20);
+
+            //}
+            //Console.WriteLine("Final Price = " + price);
+            #endregion
         }
     }
 }
