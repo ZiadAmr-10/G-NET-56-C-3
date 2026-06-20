@@ -1,4 +1,7 @@
-﻿using System.Diagnostics;
+﻿using Microsoft.VisualBasic.FileIO;
+using System.Diagnostics;
+using System.Globalization;
+using System.Linq.Expressions;
 using System.Text;
 using System.Timers;
 
@@ -79,6 +82,44 @@ namespace Assignment03
 
             //}
             //Console.WriteLine("Final Price = " + price);
+            #endregion
+            #region Question03
+            // A traditional switch statement
+            //String FileExtention = "PDF";
+            //String FileType;
+            //switch(FileExtention){
+            // case "PDF":
+            //      FileType = "PDF document";
+            //      break;
+            // case "doc":
+            // case "docx":
+            //        FileType = "Word document";
+            //        break;
+            // case "xlsx":
+            // case "xls":
+            //        FileType = "Excel SpreadSheet";
+            //        break;
+            //  case "jpg":
+            //  case "png":
+            //  case "gif":
+            //        FileType = "imagefile";
+            //        break;
+            // default:
+            //        FileType = "Unknown FileType";
+            //        break;
+            //}
+            //Console.WriteLine("File Type is : "+FileType);
+            //(b) switch expression
+            //String FileExtention = "PDF";
+            //String FileType = FileExtention switch
+            //{
+            //    "PDF" => "PDF document",
+            //    "doc" or "docx" => "Word document",
+            //    "xlsx" or "xls" => "Excel Spreadsheet",
+            //    "jpg" or "png" or "gif" => "imagefile",
+            //    _ => "Unknown FileType"
+            //};
+            //Console.WriteLine("File Type is : " + FileType);
             #endregion
         }
     }
