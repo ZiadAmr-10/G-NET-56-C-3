@@ -121,6 +121,17 @@ namespace Assignment03
             //};
             //Console.WriteLine("File Type is : " + FileType);
             #endregion
+            #region Quesion04
+            //int temperature = 35;
+            //string weatherAdvice;
+            //weatherAdvice = (temperature < 0) ? "Freezing ! Stay indoors" :
+            //              (temperature < 15) ? "Cold wear a jacket" :
+            //              (temperature < 25) ? "Pleasant weather" :
+            //              (temperature < 35) ? "Warm Stay hydratef" :
+            //              "Hot Avoid Sun Exposure";
+            //Console.WriteLine(weatherAdvice);
+            ///if-else is better because it countains a multiple conditions ,use ternary operator for simple conditions
+            #endregion
         }
     }
 }
