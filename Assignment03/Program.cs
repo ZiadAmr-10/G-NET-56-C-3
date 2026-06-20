@@ -133,60 +133,99 @@ namespace Assignment03
             ///if-else is better because it countains a multiple conditions ,use ternary operator for simple conditions
             #endregion
             #region Question05
-            string password;
-            int attempts = 0;
-            bool isValid=false;
-            do
-            {
-                Console.WriteLine("Enter your password:");
-                password = Console.ReadLine();
-                attempts++;
-                bool lengthPassword = password.Length >= 8;
-                bool hasUpper = false;
-                bool hasDigit = false;
-                bool hasSpace = false;
-                foreach (char c in password)
-                {
-                    if (char.IsUpper(c))
-                        hasUpper = true;
-                    if (char.IsDigit(c))
-                        hasDigit = true;
-                    if (c == ' ')
-                        hasSpace = true;
-                }
-                 isValid = hasDigit && hasUpper && lengthPassword && !hasSpace;
-                if (!isValid)
-                {
-                    Console.WriteLine("Invalid Passoword");
-                    if (!lengthPassword)
-                    {
-                        Console.WriteLine("The Passowoed must Minimum 8 characters");
-                    }
-                    if (!hasUpper)
-                    {
-                        Console.WriteLine("Passoword must At least one uppercase letter");
-                    }
-                    if (hasSpace)
-                    {
-                        Console.WriteLine("No spaces allowed");
-                    }
-                    if (!hasDigit)
-                    {
-                        Console.WriteLine("Passoword must countain At least one digit");
-                    }
-                }
-                if (attempts >= 5 && !isValid)
-                {
-                    Console.WriteLine("Account locked");
-                    break;
-                }
-            }
-            while (attempts < 5 && !isValid);
+            //string password;
+            //int attempts = 0;
+            //bool isValid=false;
+            //do
+            //{
+            //    Console.WriteLine("Enter your password:");
+            //    password = Console.ReadLine();
+            //    attempts++;
+            //    bool lengthPassword = password.Length >= 8;
+            //    bool hasUpper = false;
+            //    bool hasDigit = false;
+            //    bool hasSpace = false;
+            //    foreach (char c in password)
+            //    {
+            //        if (char.IsUpper(c))
+            //            hasUpper = true;
+            //        if (char.IsDigit(c))
+            //            hasDigit = true;
+            //        if (c == ' ')
+            //            hasSpace = true;
+            //    }
+            //     isValid = hasDigit && hasUpper && lengthPassword && !hasSpace;
+            //    if (!isValid)
+            //    {
+            //        Console.WriteLine("Invalid Passoword");
+            //        if (!lengthPassword)
+            //        {
+            //            Console.WriteLine("The Passowoed must Minimum 8 characters");
+            //        }
+            //        if (!hasUpper)
+            //        {
+            //            Console.WriteLine("Passoword must At least one uppercase letter");
+            //        }
+            //        if (hasSpace)
+            //        {
+            //            Console.WriteLine("No spaces allowed");
+            //        }
+            //        if (!hasDigit)
+            //        {
+            //            Console.WriteLine("Passoword must countain At least one digit");
+            //        }
+            //    }
+            //    if (attempts >= 5 && !isValid)
+            //    {
+            //        Console.WriteLine("Account locked");
+            //        break;
+            //    }
+            //}
+            //while (attempts < 5 && !isValid);
 
-            if (isValid)
+            //if (isValid)
+            //{
+            //    Console.WriteLine("Password accepted!");
+            //}
+            #endregion
+            #region Question06
+            int[] Scores= { 85, 42, 91, 67, 55, 78, 39, 88, 72, 95, 60, 48 };
+            int sum = 0, count = 0;
+            int A = 0, B = 0, C = 0, D = 0, F = 0;
+            bool foundAbove90 = false;
+            Console.WriteLine("Failing scores (<50):");
+            foreach (int score in Scores)
             {
-                Console.WriteLine("Password accepted!");
+                if (score < 50)
+                    Console.WriteLine(score);
+                if (!foundAbove90 && score > 90)
+                {
+                    Console.WriteLine("First score above 90: " + score);
+                    foundAbove90 = true;
+                }
+                if (score >= 40)
+                {
+                    sum += score;
+                    count++;
+                }
+                if (score >= 90)
+                    A++;
+                else if (score >= 80)
+                    B++;
+                else if (score >= 70)
+                    C++;
+                else if (score >= 60)
+                    D++;
+                else
+                    F++;
             }
+        double average=(double)sum/count;
+            Console.WriteLine("The Average : "+average);
+            Console.WriteLine("A: " + A);
+            Console.WriteLine("B: " + B);
+            Console.WriteLine("C: " + C);
+            Console.WriteLine("D: " + D);
+            Console.WriteLine("F: " + F);
             #endregion
         }
     }
